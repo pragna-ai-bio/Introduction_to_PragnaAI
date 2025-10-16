@@ -1,2 +1,2 @@
-# Introduction-to-PragnaAI
+# Introduction to PragnaAI
 Web to Introduce our vision
