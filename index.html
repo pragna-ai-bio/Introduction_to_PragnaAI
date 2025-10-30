@@ -173,14 +173,20 @@
             padding: 0 40px;
             z-index: 2;
             position: relative;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
         
         .tagline-container {
             margin-bottom: 40px;
+            width: 100%;
         }
         
         .tagline {
-            font-size: 3.2rem;
+            font-size: clamp(2rem, 5vw, 3.2rem);
             font-weight: 700;
             line-height: 1.3;
             margin-bottom: 30px;
@@ -192,6 +198,8 @@
                 0 2px 3px rgba(255, 255, 255, 0.2);
             position: relative;
             display: inline-block;
+            text-align: center;
+            width: 100%;
         }
         
         /* Transparent Bubbles */
