@@ -151,11 +151,9 @@
             background: rgba(255, 255, 255, 0.05);
         }
         
-        /* Hero Section with Enhanced Color Scheme */
+        /* Hero Section - Modified to match the image */
         .hero-section {
-            background: 
-                linear-gradient(135deg, #c2e9fb 0%, #a1c4fd 100%),
-                repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 255, 255, 0.3) 10px, rgba(255, 255, 255, 0.3) 20px);
+            background: #ffffff;
             min-height: 60vh;
             display: flex;
             align-items: center;
@@ -186,77 +184,24 @@
         }
         
         .tagline {
-            font-size: clamp(2rem, 5vw, 3.2rem);
-            font-weight: 700;
-            line-height: 1.3;
-            margin-bottom: 30px;
-            padding: 0 20px;
-            /* Dark black color for maximum contrast */
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 0;
+            padding: 0;
             color: #000000;
-            text-shadow: 
-                0 1px 1px rgba(255, 255, 255, 0.3),
-                0 2px 3px rgba(255, 255, 255, 0.2);
-            position: relative;
-            display: inline-block;
             text-align: center;
             width: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
-        /* Transparent Bubbles */
-        .bubble {
-            position: absolute;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            animation: float 15s ease-in-out infinite;
+        .tagline-line {
+            display: block;
+            margin-bottom: 10px;
         }
         
-        .bubble-1 {
-            width: 120px;
-            height: 120px;
-            top: 15%;
-            left: 10%;
-            animation-delay: 0s;
-        }
-        
-        .bubble-2 {
-            width: 80px;
-            height: 80px;
-            top: 25%;
-            right: 15%;
-            animation-delay: 2s;
-        }
-        
-        .bubble-3 {
-            width: 150px;
-            height: 150px;
-            bottom: 20%;
-            left: 15%;
-            animation-delay: 4s;
-        }
-        
-        .bubble-4 {
-            width: 100px;
-            height: 100px;
-            bottom: 15%;
-            right: 10%;
-            animation-delay: 6s;
-        }
-        
-        .bubble-5 {
-            width: 60px;
-            height: 60px;
-            top: 40%;
-            left: 5%;
-            animation-delay: 1s;
-        }
-        
-        .bubble-6 {
-            width: 90px;
-            height: 90px;
-            top: 60%;
-            right: 8%;
-            animation-delay: 3s;
+        .tagline-line-2 {
+            font-weight: 600;
         }
         
         .content-wrapper {
@@ -621,13 +566,6 @@
             display: block;
         }
         
-        /* Animation Keyframes */
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0); }
-            33% { transform: translateY(-20px) rotate(2deg); }
-            66% { transform: translateY(10px) rotate(-2deg); }
-        }
-        
         /* Responsive Design */
         @media (max-width: 1024px) {
             .vision-content {
@@ -667,13 +605,9 @@
                 padding: 40px 20px;
             }
             
+            /* Increased font size for mobile devices */
             .tagline {
-                font-size: 2.2rem;
-                padding: 0 10px;
-            }
-            
-            .bubble {
-                display: none;
+                font-size: 3rem; /* Increased from 2.5rem */
             }
             
             .content-wrapper {
@@ -751,7 +685,7 @@
         
         @media (max-width: 480px) {
             .tagline {
-                font-size: 1.8rem;
+                font-size: 2.5rem; /* Increased from 2rem */
             }
             
             .section-title {
@@ -814,19 +748,15 @@
     
     <!-- Home Page -->
     <div id="home-page" class="page active">
-        <!-- Hero Section with Enhanced Color Scheme -->
+        <!-- Hero Section - Modified to match the image -->
         <section class="hero-section">
-            <!-- Transparent Bubbles -->
-            <div class="bubble bubble-1"></div>
-            <div class="bubble bubble-2"></div>
-            <div class="bubble bubble-3"></div>
-            <div class="bubble bubble-4"></div>
-            <div class="bubble bubble-5"></div>
-            <div class="bubble bubble-6"></div>
-            
             <div class="hero-content">
                 <div class="tagline-container">
-                    <h1 class="tagline">"Intelligence that perceives diseases before it manifests."</h1>
+                    <h1 class="tagline">
+                        <span class="tagline-line">Intelligence that</span>
+                        <span class="tagline-line tagline-line-2">perceives</span>
+                        <span class="tagline-line">diseases before it manifests.</span>
+                    </h1>
                 </div>
             </div>
         </section>
