@@ -151,10 +151,12 @@
             background: rgba(255, 255, 255, 0.05);
         }
         
-        /* Hero Section */
+        /* Hero Section with Enhanced Color Scheme */
         .hero-section {
-            background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
-            min-height: 70vh;
+            background: 
+                linear-gradient(135deg, #c2e9fb 0%, #a1c4fd 100%),
+                repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 255, 255, 0.3) 10px, rgba(255, 255, 255, 0.3) 20px);
+            min-height: 60vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -182,16 +184,22 @@
             font-weight: 700;
             line-height: 1.3;
             margin-bottom: 30px;
-            color: var(--hero-text);
             padding: 0 20px;
+            /* Dark black color for maximum contrast */
+            color: #000000;
+            text-shadow: 
+                0 1px 1px rgba(255, 255, 255, 0.3),
+                0 2px 3px rgba(255, 255, 255, 0.2);
+            position: relative;
+            display: inline-block;
         }
         
         /* Transparent Bubbles */
         .bubble {
             position: absolute;
             border-radius: 50%;
-            background: rgba(255, 215, 0, 0.1);
-            border: 1px solid rgba(255, 215, 0, 0.2);
+            background: rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.4);
             animation: float 15s ease-in-out infinite;
         }
         
@@ -251,10 +259,12 @@
             z-index: 1;
         }
         
+        /* Vision Section - Now directly below hero */
         .vision-section {
-            margin: 80px 0;
+            margin: 0;
             padding: 80px 0;
             border-radius: 0;
+            background: var(--dark-bg);
         }
         
         .section-title {
@@ -645,7 +655,7 @@
             
             .hero-section {
                 margin-top: 60px;
-                min-height: 60vh;
+                min-height: 50vh;
                 padding: 40px 20px;
             }
             
@@ -796,7 +806,7 @@
     
     <!-- Home Page -->
     <div id="home-page" class="page active">
-        <!-- Hero Section -->
+        <!-- Hero Section with Enhanced Color Scheme -->
         <section class="hero-section">
             <!-- Transparent Bubbles -->
             <div class="bubble bubble-1"></div>
@@ -813,8 +823,9 @@
             </div>
         </section>
         
-        <div class="content-wrapper">
-            <section class="vision-section">
+        <!-- Vision Section - Now directly below hero -->
+        <section class="vision-section">
+            <div class="content-wrapper">
                 <h2 class="section-title">Vision of Early Cancer Diagnosis</h2>
                 
                 <div class="vision-content">
@@ -858,8 +869,10 @@
                         </div>
                     </div>
                 </div>
-            </section>
-            
+            </div>
+        </section>
+        
+        <div class="content-wrapper">
             <section class="meaning-section">
                 <h2 class="meaning-title">The Meaning of Pragna</h2>
                 <div class="meaning-subtitle">From Sanskrit: प्रज्ञा (Prajñā)</div>
