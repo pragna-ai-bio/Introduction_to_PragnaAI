@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PragnaAI - Early Cancer Diagnosis Vision</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -192,16 +193,27 @@
             color: #000000;
             text-align: center;
             width: 100%;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        .tagline-line {
-            display: block;
-            margin-bottom: 10px;
-        }
-        
-        .tagline-line-2 {
+            font-family: 'Poppins', sans-serif;
             font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+        
+        .tagline-emphasis {
+            font-weight: 700;
+            color: #0096FF;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .tagline-emphasis::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--primary-yellow), transparent);
+            border-radius: 2px;
         }
         
         .content-wrapper {
@@ -753,9 +765,7 @@
             <div class="hero-content">
                 <div class="tagline-container">
                     <h1 class="tagline">
-                        <span class="tagline-line">Intelligence that</span>
-                        <span class="tagline-line tagline-line-2">perceives</span>
-                        <span class="tagline-line">diseases before it manifests.</span>
+                        Intelligence that <span class="tagline-emphasis">perceives</span> diseases before they manifest.
                     </h1>
                 </div>
             </div>
