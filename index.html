@@ -66,6 +66,12 @@
             font-weight: 700;
             color: var(--logo-blue);
             letter-spacing: -0.5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
         }
         
         .nav-links {
@@ -741,7 +747,7 @@
     <!-- Header -->
     <header class="header">
         <div class="header-content">
-            <div class="logo">PragnaAI</div>
+            <div class="logo" id="logo">PragnaAI</div>
             <div class="nav-links">
                 <a href="#" class="nav-link active" data-page="home">Home</a>
                 <a href="#" class="nav-link" data-page="about">About</a>
@@ -933,6 +939,7 @@
             const pages = document.querySelectorAll('.page');
             const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
             const mobileNavLinks = document.getElementById('mobile-nav-links');
+            const logo = document.getElementById('logo');
             
             // Function to handle navigation
             function handleNavigation(e) {
@@ -956,10 +963,33 @@
                 window.scrollTo(0, 0);
             }
             
+            // Function to navigate to home page
+            function navigateToHome() {
+                // Remove active class from all links and pages
+                navLinks.forEach(nav => nav.classList.remove('active'));
+                pages.forEach(page => page.classList.remove('active'));
+                
+                // Add active class to home link
+                document.querySelector('.nav-link[data-page="home"]').classList.add('active');
+                document.querySelector('.mobile-nav-link[data-page="home"]').classList.add('active');
+                
+                // Show home page
+                document.getElementById('home-page').classList.add('active');
+                
+                // Close mobile menu if open
+                mobileNavLinks.classList.remove('active');
+                
+                // Scroll to top
+                window.scrollTo(0, 0);
+            }
+            
             // Add click event to all navigation links
             navLinks.forEach(link => {
                 link.addEventListener('click', handleNavigation);
             });
+            
+            // Add click event to logo for home navigation
+            logo.addEventListener('click', navigateToHome);
             
             // Mobile menu toggle
             mobileMenuToggle.addEventListener('click', function() {
